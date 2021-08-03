@@ -7,7 +7,7 @@ for i in range(1, 10000):
         if j == '8':
             count = count + 1
 
-print(count)
+# print(count)
 
 # Quiz 2.
 # 구구단 2단
@@ -25,11 +25,10 @@ print(count)
 #             "{} * {} = {}".format(i, j, i * j)
 #         )
 
-a, b, c =map(int,input().split())
-plus_no = a+b+c
-avg_no = plus_no / 3
-print(plus_no, format(avg_no, '.2f'))
-
+# a, b, c =map(int,input().split())
+# plus_no = a+b+c
+# avg_no = plus_no / 3
+# print(plus_no, format(avg_no, '.2f'))
 
 
 # Quiz 4.
@@ -59,9 +58,9 @@ print(plus_no, format(avg_no, '.2f'))
 #     print('winter')
 
 
-#Quiz. 5
+# Quiz. 5
 
-#a부터 입력한 문자까지 순서대로 공백 두고 한줄 출력
+# a부터 입력한 문자까지 순서대로 공백 두고 한줄 출력
 # ex) d -> a b c d
 
 # a = ord(input())
@@ -71,3 +70,28 @@ print(plus_no, format(avg_no, '.2f'))
 # 	print(chr(b), end="" if b == a else " ")
 # 	b+=1
 #
+
+
+# Quiz. 6
+# 입력받은 숫자를 1부터 더했을때 몇번째 index 까지의 합인지 마지막 index 구하기
+# num = int(input())
+# sum = 0
+# for i in range(1, num + 1):
+#     sum += i
+#     if sum >= num:
+#         print(i)
+#         break
+#
+# # Quiz. 7
+# # 주사위 n, m 숫자를 입력받고 나올 수 있는 경우의 수를 출력
+# # ex) 2 2 -> 1 1 / 2 1 / 1 2 / 2 2
+# a, b = map(int, input().split())
+# for i in range(1, a+1):
+#     for j in range(1, b + 1):
+#         print(i, j)
+
+
+n = input()
+
+for i in range(1, 10):
+    print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
