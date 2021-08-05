@@ -109,16 +109,37 @@
 # 6092 1번부터 번호가 불린 횟수를 순서대로 공백으로 구분하여 한 줄로 출력한다.
 # 출석 번호를 n번 무작위로 불렀을 때, 각 번호(1 ~ 23)가 불린 횟수를 각각 출력해보자.
 
-n = int(input())  # 불린 횟수
-a = input().split()  # 픽한 번호들
+# n = int(input())  # 불린 횟수
+# a = input().split()  # 픽한 번호들
+#
+# for i in range(n):
+#     a[i] = int(a[i])
+#
+# tmp_list = [0] * 23
+#
+# for i in range(n):
+#     tmp_list[a[i]-1] += 1
+#
+# for data in tmp_list:
+#     print(data, end=' ')
 
-for i in range(n):
-    a[i] = int(a[i])
 
-tmp_list = [0] * 23
+# 6093
+# n = int(input())
+# a = input().split()
+#
+# a.reverse()
+# print(" ".join(a))
 
-for i in range(n):
-    tmp_list[a[i]-1] += 1
+# 6094
 
-for data in tmp_list:
-    print(data, end=' ')
+# n = int(input())
+# a = [int(x) for x in input().split()]  # 10이 있으면 2보다 작다 처리함 (그래서 int로 변환)
+# a.sort()
+# print(a[0])
+
+
+# 6095 오목판 돌 위치 구하기
+n = int(input())
+# 1. 일단 바둑판 다 0으로 초기화
+# 2. 선택된 애들을 입력받기 [[n, m], [n, m], [n, m], [n, m], [n, m]]
