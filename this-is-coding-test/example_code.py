@@ -1,3 +1,7 @@
+"""
+Quiz. title
+Page. 110
+"""
 import time
 
 start_time = time.time()
