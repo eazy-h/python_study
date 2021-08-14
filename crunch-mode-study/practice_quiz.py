@@ -1,12 +1,12 @@
 # Quiz 1.
 # 1~10000까지의 8이 들어가는 숫자 갯수 찾기
-count = 0
-
-for i in range(1, 10000):
-    for j in str(i):  # 8080 -> 4번 for문
-        if j == '8':
-            count = count + 1
-
+# count = 0
+#
+# for i in range(1, 10000):
+#     for j in str(i):  # 8080 -> 4번 for문
+#         if j == '8':
+#             count = count + 1
+#
 # print(count)
 
 # Quiz 2.
@@ -81,6 +81,7 @@ for i in range(1, 10000):
 #     if sum >= num:
 #         print(i)
 #         break
+
 #
 # # Quiz. 7
 # # 주사위 n, m 숫자를 입력받고 나올 수 있는 경우의 수를 출력
@@ -94,4 +95,4 @@ for i in range(1, 10000):
 n = input()
 
 for i in range(1, 10):
-    print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
+    print('%X' % n, '*%X' % i, '=%X' % (n * i), sep='')

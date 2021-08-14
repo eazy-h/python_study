@@ -1,5 +1,5 @@
 # 얼음 틀에 생성되는 아이스크림 갯수 구하기
-
+# dfs
 n, m = map(int, input().split())
 
 # coordinate = [[0] * (n + 1) for i in range(n + 1)] 1,1 로 시작하는 2차 배열 생성

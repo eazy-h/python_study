@@ -1,4 +1,4 @@
-# 미로 탈출
+# 미로 탈출 bfs
 from collections import deque
 
 n, m = map(int, input().split())

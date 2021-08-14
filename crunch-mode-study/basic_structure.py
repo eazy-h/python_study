@@ -58,7 +58,8 @@ dic.clear()
 # 순서가 없고 모든 데이터는 unique 특징 (중복 허용 x)
 # 중괄호 사용하는 표현방식은 dict과 비슷하지만 key가 없고 value만 존재
 # 사용시 list로 감싸거나 dict, duple로 변환해서 사용하기
-demo_set = set("hello check")
-new_list_demo_set = [demo for demo in demo_set if demo != " "]  # 공백 데이터를 제외한 실제 str만 리스트로 리턴
+demo_set = set("hello check") # 중복제거 set()
+# ["리턴 데이터" for "리턴 데이터" in obj_set "조건"] 리스트로 반환
+new_list_demo_set = [demo for demo in demo_set if demo != " "]  # 공백 데이터, 중복(set)을 제외한 실제 str만 리스트로 리턴
 new_list_demo_set.sort()  # 정렬
 print(new_list_demo_set)
