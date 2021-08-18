@@ -14,39 +14,46 @@
 # 2번
 # [5][5] == 0, 0
 def solution(dirs):
-    init_map = [[0] * 11 for _ in range(11)]
-    x = 5
-    y = 5
-    init_map[5][5] = 1
+    init_map = []
+    x = 0
+    y = 0
     str_set = list(dirs)
     for i in range(len(str_set)):
-        if x <= 0 or y <= 0 or x >= 10 or y >= 10:
-            pass
-        else:
-            if str_set[i] == 'U':
-                init_map[x - 1][y] = 1
-                x = x - 1
-            elif str_set[i] == 'D':
-                init_map[x + 1][y] = 1
-                x = x + 1
-            elif str_set[i] == 'L':
-                init_map[x][y - 1] = 1
-                y = y - 1
-            elif str_set[i] == 'R':
-                init_map[x][y + 1] = 1
-                y = y + 1
+        if x <= -5 or y <= -5 or x >= 5 or y >= 5:
+            continue
+        if str_set[i] == 'U':
+            x = x - 1
+        elif str_set[i] == 'D':
+            init_map[x + 1][y] = 1
+            x = x + 1
+        elif str_set[i] == 'L':
+            init_map[x][y - 1] = 1
+            y = y - 1
+        elif str_set[i] == 'R':
+            init_map[x][y + 1] = 1
+            y = y + 1
+        init_map.append(list(map(int, (x, y))))
 
-    sum = 0
-    for i in range(len(init_map)):
-        for j in range(len(init_map)):
-            if init_map[i][j] == 1:
-                sum+=1
+    # result = list(set(init_map))
+    # print(len(init_map))
+    count = 0
+    demo_set = []
+    demo2_set = []
+    for i in range(len(init_map) - 1):
+        for j in range(len(init_map[i])):
+            # if i < 8:
+            demo_set.append(init_map[i])
+            demo2_set.append(init_map[i + 1])
+                # print(init_map[i][j])
+                # print(init_map[i + 1][j])
+            # if list(init_map[i]) == list(init_map[i + 1]):
+            #     print("con")
+            # print()
+        # print()
+    return count
 
-    return sum
 
-
-print(solution("UDUD"))
-
+print(solution("ULURRDLLU"))
 
 # 3번
 # def solution(a, b):
